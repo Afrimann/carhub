@@ -44,6 +44,15 @@ export const manufacturers = [
   
   export const yearsOfProduction = [
     { title: "Year", value: "" },
+    { title: "2023", value: "1992" },
+    { title: "2023", value: "1993" },
+    { title: "2023", value: "1994" },
+    { title: "2023", value: "1995" },
+    { title: "2023", value: "1996" },
+    { title: "2023", value: "1997" },
+    { title: "2023", value: "1998" },
+    { title: "2023", value: "1999" },
+    { title: "2023", value: "2000" },
     { title: "2015", value: "2015" },
     { title: "2016", value: "2016" },
     { title: "2017", value: "2017" },
@@ -53,12 +62,18 @@ export const manufacturers = [
     { title: "2021", value: "2021" },
     { title: "2022", value: "2022" },
     { title: "2023", value: "2023" },
+    { title: "2023", value: "2024" },
+
   ];
   
   export const fuels = [
     {
       title: "Fuel",
       value: "",
+    },
+    {
+      title: "Petrol",
+      value: "Petrol",
     },
     {
       title: "Gas",

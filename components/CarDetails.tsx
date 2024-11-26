@@ -5,6 +5,7 @@ import React from 'react'
 import Image from 'next/image'
 import { Fragment } from 'react'
 import { Dialog, DialogPanel, Transition, TransitionChild } from '@headlessui/react'
+import { generateCarImageUrl } from '@/utils'
 
 interface CarDetailsProps {
     car: CarProps
@@ -55,17 +56,17 @@ const CarDetails = ({ car, closeModal, isOpen }: CarDetailsProps) => {
 
                                     <div className='flex-1 flex flex-col gap-3'>
                                         <div className='relative h-40 w-full bg-pattern bg-cover bg-center rounded-lg'>
-                                        <Image src='/hero.png' alt='Car model' fill priority className='object-contain'/>
+                                        <Image src={generateCarImageUrl(car)} alt='Car model' fill  className='object-contain'/>
                                         </div>
                                         <div className="flex gap-3">
                                             <div className='h-24 flex-1 relative w-full rounded-lg bg-primary-blue-100 '>
-                                            <Image src='/hero.png' alt='Car model' fill priority className='object-contain'/>
+                                            <Image src={generateCarImageUrl(car,'29')} alt='Car model' fill  className='object-contain'/>
                                             </div>
                                             <div className='h-24 flex-1 relative w-full rounded-lg bg-primary-blue-100 '>
-                                            <Image src='/hero.png' alt='Car model' fill priority className='object-contain'/>
+                                            <Image src={generateCarImageUrl(car,'33')} alt='Car model' fill  className='object-contain'/>
                                             </div>
                                             <div className='h-24 flex-1 relative w-full rounded-lg bg-primary-blue-100 '>
-                                            <Image src='/hero.png' alt='Car model' fill priority className='object-contain'/>
+                                            <Image src={generateCarImageUrl(car,'13')} alt='Car model' fill  className='object-contain'/>
                                             </div>
                                         </div>
                                     </div>
@@ -79,7 +80,7 @@ const CarDetails = ({ car, closeModal, isOpen }: CarDetailsProps) => {
                                             {Object.entries(car).map(([key,value]) => (
                                                 <div className='flex justify-between w-full gap-5 text-right' key={key}>
                                                     <h4 className='text-grey capitalize '>{key.split('_').join(' ')}</h4>
-                                                    <p className='font-semibold text-black-100'>{value}</p>
+                                                    <p className='font-semibold text-black-100 capitalize'>{value}</p>
 
                                                 </div>
                                             ))}
